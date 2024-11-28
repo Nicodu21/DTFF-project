@@ -53,4 +53,4 @@ See link the requirment
 
 ## Bugs
 
-Find a bug in the project? [Open a new issue on GitHub](https://github.com/patrickrstorz/DTfF_group_project/issues)
+Find a bug in the project? [Open a new issue on GitHub](https://github.com/Nicodu21/DTFF-project/issues)
