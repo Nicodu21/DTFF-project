@@ -52,7 +52,7 @@ To modify the presentation or report you require a tex editor, we used [MikTex](
 
 ## Dependencies
 
-See link the requirment 
+See [requirements](https://github.com/Nicodu21/DTFF-project/blob/main/code/requirements.txt)
 
 ## Bugs
 
