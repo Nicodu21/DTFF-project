@@ -22,14 +22,14 @@ The affect of product annoucments on the stock price volatility of bif tech comp
 - the data is from 
 
 ### Data
-- The [announcement](https://github.com/Nicodu21/DTFF-project/blob/main/announcements.xlsx) data set was complied using Chat GPT which helped us gathering the data fro  the 10 biggest Tech companies (by 2024 market cap).
-- The [stock](https://github.com/Nicodu21/DTFF-project/blob/main/Stock_Prices.xlsx) data set was retrived form NOT SURE ABOUT THIS Yahoo finance on DD-MM-YYYY, explain birefly the structur of the data. 
+- The [announcement](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) data set was complied using Chat GPT which helped us gathering the data fro  the 10 biggest Tech companies (by 2024 market cap).
+- The [stock](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) data set was retrived form NOT SURE ABOUT THIS Yahoo finance on DD-MM-YYYY, explain birefly the structur of the data. 
 
 # Structure of Project
 
     .
     ├── data                # Data used for our analysis
-    ├── src                 # Code that performs analysis
+    ├── code                 # Code that performs analysis
 	│   └── output              # Charts outputted from code   
     ├── text                # Documentation files
 	│   ├── presentation        # Presentation of project
