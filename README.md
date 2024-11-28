@@ -27,14 +27,16 @@ The affect of product annoucments on the stock price volatility of tech companie
 
 # Structure of Project
 
+
     .
     ├── data                # Data used for our analysis
-    ├── code                 # Code that performs analysis
-	│   └── output              # Charts outputted from code   
+    ├── code                # Code that performs analysis
+	│   └── output              # Charts outputted from code
     ├── text                # Documentation files
 	│   ├── presentation        # Presentation of project
     │   └── report              # Report of project
     └── README.md
+	
 	
 ## Download and Usage
 
