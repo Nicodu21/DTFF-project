@@ -1,6 +1,6 @@
-# Digital Tools for Finance - Assignment
+# Digital Tools for Finance - Final project
 
-This is the assignment project of
+This is the final project of
 - Lucille Dauer  xx-xxx-xxx
 - Nicolas Profumo   xx-xxx-xxx
 - Pierre Angevin xx-xxx-xxx
@@ -10,7 +10,7 @@ for the course Digital Tools for Finance at UZH.
 
 ## What is the project about?
 
-The affect of product annoucments on the stock price volatility of bif tech company's.
+The affect of product annoucments on the stock price volatility of tech companies.
 
 * * *
 
@@ -19,7 +19,7 @@ The affect of product annoucments on the stock price volatility of bif tech comp
 
 ### Info about the Project (Vol/annoucments etc) 
 - We use a 10 day rolling average vol
-- the data is from 
+- the annocument are new products/new features presented by the companies themeselves either in conferences or official communication
 
 ### Data
 - The [announcement](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) data set was complied using Chat GPT which helped us gathering the data fro  the 10 biggest Tech companies (by 2024 market cap).
