@@ -12,11 +12,6 @@ for the course Digital Tools for Finance at UZH.
 
 The affect of product annoucments on the stock price volatility of tech companies.
 
-* * *
-
-
-* * *
-
 ### Info about the Project (Vol/annoucments etc) 
 - We use a 10 day rolling average vol
 - the annocument are new products/new features presented by the companies themeselves either in conferences or official communication
