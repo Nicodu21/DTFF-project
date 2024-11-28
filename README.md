@@ -16,13 +16,14 @@ The affect of product annoucments on the stock price volatility of bif tech comp
 
 
 * * *
-### Collaboration Comments
-- [Brainstorming miro](https://miro.com/app/board/o9J_khn4A3g=/)
-- More about managing the project in Projects --> Assignment
 
 ### Info about the Project (Vol/annoucments etc) 
+- We use a 10 day rolling average vol
+- the data is from 
 
-
+### Data
+- The [announcement](https://github.com/Nicodu21/DTFF-project/blob/main/announcements.xlsx) data set was complied using Chat GPT which helped us gathering the data fro  the 10 biggest Tech companies (by 2024 market cap).
+- The [stock](https://github.com/Nicodu21/DTFF-project/blob/main/Stock_Prices.xlsx) data set was retrived form NOT SURE ABOUT THIS Yahoo finance on DD-MM-YYYY, explain birefly the structur of the data. 
 
 # Structure of Project
 
@@ -37,7 +38,7 @@ The affect of product annoucments on the stock price volatility of bif tech comp
 	
 ## Download and Usage
 
-Simply Fork, Clone, or Download on GitHub (maybe modify this 
+Simply Fork, Clone, or Download on GitHub (maybe modify this)
 
 To run the code ensure that your environment has the needed libraries by using pip:
 
