@@ -12,11 +12,11 @@ for the course Digital Tools for Finance at UZH.
 
 The affect of product annoucments on the stock price volatility of tech companies.
 
-### Info about the Project (Vol/annoucments etc) 
+## Info about the Project (Vol/annoucments etc) 
 - We use a 10 day rolling average vol
 - the annocument are new products/new features presented by the companies themeselves either in conferences or official communication
 
-### Data
+## Data
 - The [announcement](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) data set was complied using Chat GPT which helped us gathering the data fro  the 10 biggest Tech companies (by 2024 market cap).
 - The [stock](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) data set was retrived form NOT SURE ABOUT THIS Yahoo finance on DD-MM-YYYY, explain birefly the structur of the data. 
 
