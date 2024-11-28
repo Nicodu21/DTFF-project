@@ -44,7 +44,7 @@ To run the code ensure that your environment has the needed libraries by using p
 
 `pip install -r requirements.txt`
 
-you can find the [requirements](https://github.com/Nicodu21/DTFF-project/blob/main/code/requirements.txt) in /code/ 
+you can find the [requirements.txt](https://github.com/Nicodu21/DTFF-project/blob/main/code/requirements.txt) in /code/ 
 
 To modify the presentation or report you require a tex editor, we used [MikTex](https://miktex.org/)
 
