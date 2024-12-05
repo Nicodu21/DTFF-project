@@ -17,8 +17,8 @@ The affect of product annoucments on the stock price volatility of tech companie
 - the annocument are new products/new features presented by the companies themeselves either in conferences or official communication
 
 ## Data
-- The [announcement](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) data set was complied using Chat GPT which helped us gathering the data fro  the 10 biggest Tech companies (by 2024 market cap).
-- The [stock](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) data set was retrived form NOT SURE ABOUT THIS Yahoo finance on DD-MM-YYYY, explain birefly the structur of the data. 
+- The [announcement data set](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) was complied using Chat GPT which helped us gathering the data fro  the 10 biggest Tech companies (by 2024 market cap).
+- The [stock prices data set](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) was retrived form NOT SURE ABOUT THIS Yahoo finance on DD-MM-YYYY, explain birefly the structur of the data. 
 
 # Structure of Project
 
@@ -41,7 +41,7 @@ To run the code ensure that your environment has the needed libraries by using p
 
 `pip install -r requirements.txt`
 
-you can find the [requirements.txt](https://github.com/Nicodu21/DTFF-project/blob/main/code/requirements.txt) in /code/ 
+you can find requirements.txt [here](https://github.com/Nicodu21/DTFF-project/blob/main/code/requirements.txt)
 
 To modify the presentation or report you require a tex editor, we used [MikTex](https://miktex.org/)
 
