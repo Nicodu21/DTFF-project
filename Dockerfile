@@ -1,22 +1,19 @@
-# Use the official Python base image
-FROM python:3.10-slim
- 
+# Use the official Shiny image as the base
+FROM rocker/shiny:latest
+
+# Install required R packages
+RUN R -e "install.packages(c('shiny', 'ggplot2', 'readxl', 'dplyr', 'zoo', 'tidyr', 'readr'))"
 
 # Set the working directory
-WORKDIR /app
- 
-# Copy requirements if needed (optional)
-# If you have a requirements.txt file, uncomment the next lines and make sure to include it in the same directory as the Dockerfile
-COPY requirements.txt /app/
-RUN pip install --no-cache-dir -r requirements.txt
-COPY DTFF_project.ipynb /app/main.ipynb
-COPY announcements.xlsx /app/
-COPY Stock_Prices.xlsx /app/ 
-# Install Jupyter
-RUN pip install --no-cache-dir jupyter
- 
-# Expose the default Jupyter Notebook port
-EXPOSE 8888
- 
-# Start Jupyter Notebook
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+WORKDIR /srv/shiny-server/
+
+# Copy the app and data files into the container
+COPY app.R /srv/shiny-server/
+COPY Stock_Prices_csv.csv /srv/shiny-server/
+COPY announcements.xlsx /srv/shiny-server/
+
+# Expose the default Shiny server port
+EXPOSE 3838
+
+# Start the Shiny server
+CMD ["/usr/bin/shiny-server"]
