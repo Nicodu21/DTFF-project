@@ -32,3 +32,7 @@ EXPOSE 3838
 
 # Lancer le serveur Shiny
 CMD ["/usr/bin/shiny-server"]
+
+#command to launch the R app
+# docker build -t shiny-volatility-app . 
+# docker run -p 3838:3838 shiny-volatility-app
