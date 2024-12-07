@@ -13,7 +13,7 @@ for the course Digital Tools for Finance at UZH.
 The affect of product annoucments on the stock volatility of tech companies.
 
 ## Info about the Project
-- stock price is the daily closing stock price adujusted for dividend 
+- stock price is the daily closing stock price adjusted for dividend. 
 - the annoncements are important products/new features communicated by the companies either in conferences or official communications
 - to calculate volatility we use a rolling average of 10 days 
 
