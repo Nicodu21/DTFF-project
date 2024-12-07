@@ -23,18 +23,18 @@ The affect of product annoucments on the stock price volatility of tech companie
 # Structure of Project
 
 
-    .
-├── Data                # Data used for our analysis
-├── Text                # Documentation files
-│   ├── presentation    # Presentation of project
-│   └── report          # Report of project
-├── code
-│   ├── notebook        # Python notebook that performs analysis
-│   └── output          # Charts outputted from code
-├── .gitignore          # Git configuration to ignore specific files or directories
-├── Dockerfile          # Instructions to build a Docker image for the project
-├── README.md           # Project overview and instructions
-├── requirements.txt    # Python dependencies for the project
+.
+    ├── Data                # Data used for our analysis
+    ├── Text                # Documentation files
+    │   ├── presentation    # Presentation of project
+    │   └── report          # Report of project
+    ├── code
+    │   ├── notebook        # Python notebook that performs analysis
+    │   └── output          # Charts outputted from code
+    ├── .gitignore          # Git configuration to ignore specific files or directories
+    ├── Dockerfile          # Instructions to build a Docker image for the project
+    ├── README.md           # Project overview and instructions
+    └── requirements.txt    # Python dependencies for the project
 	
 ## Download and Usage
 
