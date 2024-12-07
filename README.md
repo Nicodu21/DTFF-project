@@ -23,7 +23,7 @@ The affect of product annoucments on the stock price volatility of tech companie
 # Structure of Project
 
 
-.
+
     ├── Data                # Data used for our analysis
     ├── Text                # Documentation files
     │   ├── presentation    # Presentation of project
@@ -35,7 +35,8 @@ The affect of product annoucments on the stock price volatility of tech companie
     ├── Dockerfile          # Instructions to build a Docker image for the project
     ├── README.md           # Project overview and instructions
     └── requirements.txt    # Python dependencies for the project
-	
+
+
 ## Download and Usage
 
 Simply Fork, Clone, or Download on GitHub (maybe modify this)
