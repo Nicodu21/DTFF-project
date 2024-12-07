@@ -1,111 +1,83 @@
 library(shiny)
 library(ggplot2)
-library(readxl)
+library(plotly)
 library(dplyr)
-library(zoo)  # For rolling calculations
-library(tidyr)
 library(readr)
+library(tidyr)
 
-# Load the data
-stock_data <- read_csv("/srv/shiny-server/Stock_Prices_csv.csv", delim = ";")
-announcements_data <- read_excel("/srv/shiny-server/announcements.xlsx")
+# Load and preprocess the data
+stock_data <- read_delim("Data/Stock_Prices_csv.csv", delim = ";", col_types = cols(.default = "c")) %>%
+  mutate(across(-Name, ~ as.numeric(gsub(",", ".", .)))) %>%
+  pivot_longer(-Name, names_to = "Date", values_to = "Close") %>%
+  mutate(Date = as.Date(Date, format = "%d/%m/%Y"))
 
+# Load and preprocess announcements data
+announcements_data <- read_delim("Data/announcements.csv", delim = ";", col_types = cols(.default = "c")) %>%
+  rename_with(trimws) %>%  # Remove any trailing whitespace from column names
+  mutate(Date = as.Date(Date, format = "%d/%m/%Y")) %>%
+  rename(Name = Company)
 
-
-# Reshape the stock data to long format
-stock_data_long <- stock_data %>%
-  pivot_longer(
-    cols = -Name,            # Keep the "Name" column as-is
-    names_to = "Date",       # Create a "Date" column from column names
-    values_to = "Price"      # Create a "Price" column for the values
-  ) %>%
-  mutate(
-    Date = as.Date(Date, format = "%d.%m.%Y"),  # Convert Date to proper format
-    Price = as.numeric(gsub(",", ".", Price))  # Convert Price to numeric
-  )
-
-# Ensure the announcements data has proper date formatting
-announcements_data <- announcements_data %>%
-  mutate(Date = as.Date(Date, format = "%Y-%m-%d"))
-
-# UI
+# Define UI
 ui <- fluidPage(
-  titlePanel("Firm Volatility Over Time"),
+  titlePanel("Cours des Actions (2019-2020)"),
   sidebarLayout(
     sidebarPanel(
-      selectInput("firm", "Select a firm:", choices = unique(stock_data_long$Name)),
-      dateRangeInput(
-        "date_range",
-        "Select Time Frame:",
-        start = min(stock_data_long$Date, na.rm = TRUE),
-        end = max(stock_data_long$Date, na.rm = TRUE)
-      ),
-      actionButton("update", "Update Graph")
+      selectInput("company", "Select Company:", choices = unique(stock_data$Name)),
+      dateRangeInput("dateRange", "Select Date Range:",
+                     start = min(stock_data$Date, na.rm = TRUE),
+                     end = max(stock_data$Date, na.rm = TRUE),
+                     min = min(stock_data$Date, na.rm = TRUE),
+                     max = max(stock_data$Date, na.rm = TRUE),
+                     format = "dd/mm/yyyy")
     ),
     mainPanel(
-      plotOutput("volatilityPlot")
+      plotlyOutput("pricePlot")
     )
   )
 )
 
-# Server
-server <- function(input, output, session) {
-  observeEvent(input$update, {
-    output$volatilityPlot <- renderPlot({
-      print("Filtering data...")
-
-      # Filter stock data based on selected firm and date range
-      filtered_data <- stock_data_long %>%
-        filter(Name == input$firm & Date >= input$date_range[1] & Date <= input$date_range[2])
-
-      # Debug: Print filtered data
-      print("Filtered Data:")
-      print(filtered_data)
-
-      # Handle missing data gracefully
-      if (nrow(filtered_data) == 0) {
-        return(
-          ggplot() +
-            annotate("text", x = 1, y = 1, label = "No data available for the selected firm and date range.", size = 5) +
-            theme_void()
-        )
-      }
-
-      # Calculate rolling volatility
-      filtered_data <- filtered_data %>%
-        arrange(Date) %>%
-        mutate(
-          Returns = c(NA, diff(log(Price))),
-          RollingVolatility = rollapply(Returns, width = 20, FUN = sd, fill = NA)
-        )
-
-      # Debug: Print rolling volatility data
-      print("Rolling Volatility Data:")
-      print(head(filtered_data))
-
-      # Filter announcements based on the selected date range
-      filtered_announcements <- announcements_data %>%
-        filter(Date >= input$date_range[1] & Date <= input$date_range[2])
-
-      # Plot the data
-      ggplot(filtered_data, aes(x = Date, y = RollingVolatility)) +
-        geom_line(color = "blue") +
-        geom_vline(
-          data = filtered_announcements,
-          aes(xintercept = as.Date(Date)),
-          color = "red",
-          linetype = "dashed",
-          alpha = 0.7
-        ) +
-        labs(
-          title = paste("Volatility of", input$firm, "Over Time"),
-          x = "Date",
-          y = "Rolling Volatility"
-        ) +
-        theme_minimal()
-    })
+# Define server logic
+server <- function(input, output) {
+  filtered_data <- reactive({
+    stock_data %>%
+      filter(Name == input$company & Date >= input$dateRange[1] & Date <= input$dateRange[2])
+  })
+  
+  filtered_announcements <- reactive({
+    # Join announcements with stock prices to get the closing price for each announcement
+    announcements_data %>%
+      filter(Name == input$company & 
+             Date >= input$dateRange[1] & 
+             Date <= input$dateRange[2]) %>%
+      left_join(stock_data %>% select(Name, Date, Close), 
+                by = c("Name", "Date"))
+  })
+  
+  output$pricePlot <- renderPlotly({
+    p <- ggplot() +
+      # Stock price line
+      geom_line(data = filtered_data(), aes(x = Date, y = Close), color = "blue") +
+      # Announcements as points
+      geom_point(data = filtered_announcements(), 
+                aes(x = Date, y = Close, text = Announcement),
+                color = "red", size = 3) +
+      labs(
+        title = paste("Cours de l'action", input$company, "(2019-2020)"),
+        x = "Date",
+        y = "Prix de clôture (USD)"
+      ) +
+      theme_minimal() +
+      scale_y_continuous(labels = scales::dollar) +
+      theme(
+        plot.title = element_text(hjust = 0.5),
+        axis.text.x = element_text(angle = 45, hjust = 1)
+      )
+    
+    # Convert to plotly with custom tooltip for announcements
+    ggplotly(p, tooltip = c("text")) %>%
+      layout(hovermode = "closest")
   })
 }
 
-# Launch the app
+# Run the application 
 shinyApp(ui = ui, server = server)

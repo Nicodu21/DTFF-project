@@ -1,19 +1,34 @@
-# Use the official Shiny image as the base
+# Utiliser une image de base avec R et Shiny
 FROM rocker/shiny:latest
 
-# Install required R packages
-RUN R -e "install.packages(c('shiny', 'ggplot2', 'readxl', 'dplyr', 'zoo', 'tidyr', 'readr'))"
+# Installer les bibliothèques nécessaires
+RUN apt-get update && apt-get install -y \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libxml2-dev
 
-# Set the working directory
-WORKDIR /srv/shiny-server/
+RUN R -e "install.packages('shiny')"
+RUN R -e "install.packages('ggplot2')"
+RUN R -e "install.packages('plotly')"
+RUN R -e "install.packages('tidyverse')"
+RUN R -e "install.packages('readr')"
+RUN R -e "install.packages('dplyr')"
+RUN R -e "install.packages('tidyr')"
+RUN R -e "install.packages('scales')"
 
-# Copy the app and data files into the container
+# Créer le répertoire Data dans le conteneur
+RUN mkdir -p /srv/shiny-server/Data
+
+# Copier les fichiers de l'application Shiny
 COPY app.R /srv/shiny-server/
-COPY Stock_Prices_csv.csv /srv/shiny-server/
-COPY announcements.xlsx /srv/shiny-server/
+COPY Data/Stock_Prices_csv.csv /srv/shiny-server/Data/
+COPY Data/announcements.csv /srv/shiny-server/Data/
 
-# Expose the default Shiny server port
+# Définir les permissions
+RUN chown -R shiny:shiny /srv/shiny-server
+
+# Exposer le port utilisé par Shiny
 EXPOSE 3838
 
-# Start the Shiny server
+# Lancer le serveur Shiny
 CMD ["/usr/bin/shiny-server"]
