@@ -1,9 +1,9 @@
 # Digital Tools for Finance - Final project
 
 This is the final project of
-- Lucille Dauer  xx-xxx-xxx
+- Lucille Dauer  20-205-670
 - Nicolas Profumo   19-419-290
-- Pierre Angevin xx-xxx-xxx
+- Pierre Angevin 19-823-921
 - Bastien Tognolini 21-409-925
 
 for the course Digital Tools for Finance at UZH.
