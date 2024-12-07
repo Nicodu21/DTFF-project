@@ -1,0 +1,24 @@
+##stock_Prices.xlsx Data Frame Description
+
+Number of Rows: 5
+
+Number of Columns: 2610
+
+Column Names:
+Name (company ticker or name)
+Dates from 2013-12-31 to 2023-12-29 in YYYY-MM-DD HH:MM:SS format (daily stock prices).
+
+Data Types and Formats:
+Column 1: Name
+Data Type: String
+Format: Company ticker or name (e.g., "APPL", "NVDA").
+
+Columns 2 to 2610: Stock Prices
+Data Type: Float
+Format: Daily stock prices corresponding to each date in YYYY-MM-DD HH:MM:SS format (e.g., 17691.13).
+
+
+
+
+
+
