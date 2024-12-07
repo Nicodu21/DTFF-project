@@ -10,15 +10,18 @@ for the course Digital Tools for Finance at UZH.
 
 ## What is the project about?
 
-The affect of product annoucments on the stock price volatility of tech companies.
+The affect of product annoucments on the stock volatility of tech companies.
 
-## Info about the Project (Vol/annoucments etc) 
-- We use a 10 day rolling average vol
-- the annoncements are new products/new features presented by the companies themeselves either in conferences or official communication
+## Info about the Project
+- stock price is the daily closing stock price adujusted for dividend 
+- the annoncements are important products/new features communicated by the companies either in conferences or official communications
+- to calculate volatility we use a rolling average of 10 days 
 
 ## Data
-- The [announcement data set](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) was compiled using Chat GPT which helped us gathering the data from  the 10 biggest Tech companies (by 2024 market cap).
+- The [announcement data set](https://github.com/Nicodu21/DTFF-project/blob/main/Data/announcements.xlsx) was compiled using Chat GPT which helped us gathering the data from  the 10 biggest Tech companies (by 2024 market cap).
+          Data Frame Structure and technical specificity can be found [here](https://github.com/Nicodu21/DTFF-project/blob/main/Data/announcements.txt)
 - The [stock prices data set](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) was compiled with Refinitiv EIKON (Datastream) that gathers daily stock prices in USD (adjusted for dividends) from 31.12.2013-31.12.2023 for the ten biggest tech firms in terms of market capitalization.
+          Data Frame Structure and technical specificity can be found [here](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.txt)
 
 # Structure of Project
 
