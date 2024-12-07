@@ -4,7 +4,7 @@ This is the final project of
 - Lucille Dauer  xx-xxx-xxx
 - Nicolas Profumo   xx-xxx-xxx
 - Pierre Angevin xx-xxx-xxx
-- Bastien Tognolini xx-xxx-xxx
+- Bastien Tognolini 21-409-925
 
 for the course Digital Tools for Finance at UZH.
 
