@@ -42,7 +42,7 @@ The affect of product annoucments on the stock volatility of tech companies.
 
 ## Download and Usage
 
-Simply Fork, Clone, or Download on GitHub
+To download our project from GitHub use the bash command: `git clone url_of_the_repository`
 
 To run the code ensure that your environment has the needed libraries by using pip:
 
