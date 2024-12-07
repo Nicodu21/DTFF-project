@@ -42,19 +42,19 @@ The affect of product annoucments on the stock volatility of tech companies.
 
 ## Download and Usage
 
-Simply Fork, Clone, or Download on GitHub (maybe modify this)
+Simply Fork, Clone, or Download on GitHub
 
 To run the code ensure that your environment has the needed libraries by using pip:
 
 `pip install -r requirements.txt`
 
-you can find requirements.txt [here](https://github.com/Nicodu21/DTFF-project/blob/main/code/requirements.txt)
+you can find requirements.txt [here](https://github.com/Nicodu21/DTFF-project/requirements.txt)
 
 To modify the presentation or report you require a tex editor, we used [MikTex](https://miktex.org/)
 
 ## Dependencies
 
-See [requirements](https://github.com/Nicodu21/DTFF-project/blob/main/code/requirements.txt)
+See [requirements](https://github.com/Nicodu21/DTFF-project/requirements.txt)
 
 ## Bugs
 
