@@ -2,7 +2,7 @@
 
 This is the final project of
 - Lucille Dauer  xx-xxx-xxx
-- Nicolas Profumo   xx-xxx-xxx
+- Nicolas Profumo   19-419-290
 - Pierre Angevin xx-xxx-xxx
 - Bastien Tognolini 21-409-925
 
@@ -14,24 +14,27 @@ The affect of product annoucments on the stock price volatility of tech companie
 
 ## Info about the Project (Vol/annoucments etc) 
 - We use a 10 day rolling average vol
-- the annocument are new products/new features presented by the companies themeselves either in conferences or official communication
+- the annoncements are new products/new features presented by the companies themeselves either in conferences or official communication
 
 ## Data
-- The [announcement data set](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) was complied using Chat GPT which helped us gathering the data fro  the 10 biggest Tech companies (by 2024 market cap).
-- The [stock prices data set](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) was retrived form NOT SURE ABOUT THIS Yahoo finance on DD-MM-YYYY, explain birefly the structur of the data. 
+- The [announcement data set](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) was compiled using Chat GPT which helped us gathering the data from  the 10 biggest Tech companies (by 2024 market cap).
+- The [stock prices data set](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) was compiled with Refinitiv EIKON (Datastream) that gathers daily stock prices in USD (adjusted for dividends) from 31.12.2013-31.12.2023 for the ten biggest tech firms in terms of market capitalization.
 
 # Structure of Project
 
 
     .
-    ├── data                # Data used for our analysis
-    ├── code                # Code that performs analysis
-	│   └── output              # Charts outputted from code
-    ├── text                # Documentation files
-	│   ├── presentation        # Presentation of project
-    │   └── report              # Report of project
-    └── README.md
-	
+├── Data                # Data used for our analysis
+├── Text                # Documentation files
+│   ├── presentation    # Presentation of project
+│   └── report          # Report of project
+├── code
+│   ├── notebook        # Python notebook that performs analysis
+│   └── output          # Charts outputted from code
+├── .gitignore          # Git configuration to ignore specific files or directories
+├── Dockerfile          # Instructions to build a Docker image for the project
+├── README.md           # Project overview and instructions
+├── requirements.txt    # Python dependencies for the project
 	
 ## Download and Usage
 
