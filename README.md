@@ -42,7 +42,7 @@ The affect of product annoucments on the stock volatility of tech companies.
 
 ## Download and Usage
 
-To download our project from GitHub use the bash command: `git clone [url_of_the_repository](https://github.com/Nicodu21/DTFF-project)`
+To download our project from GitHub use the bash command: `git clone https://github.com/Nicodu21/DTFF-project`
 
 To run the code ensure that your environment has the needed libraries by using pip:
 
