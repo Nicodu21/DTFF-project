@@ -18,11 +18,9 @@ The affect of product annoucments on the stock volatility of tech companies.
 - to calculate volatility we use a rolling average of 10 days 
 
 ## Data
-- The [announcement data set](https://github.com/Nicodu21/DTFF-project/blob/main/Data/announcements.xlsx) was compiled using Chat GPT which helped us gathering the data from  the 10 biggest Tech companies (by 2024 market cap).
-  
+- The [announcement data set](https://github.com/Nicodu21/DTFF-project/blob/main/Data/announcements.xlsx) was compiled using Chat GPT which helped us gathering the data from  the 10 biggest Tech companies (by 2024 market cap).  
    Data Frame Structure and technical specificity can be found [here](https://github.com/Nicodu21/DTFF-project/blob/main/Data/announcements.txt)
-- The [stock prices data set](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) was compiled with Refinitiv EIKON (Datastream) that gathers daily stock prices in USD (adjusted for dividends) from 31.12.2013-31.12.2023 for the ten biggest tech firms in terms of market capitalization.
-
+- The [stock prices data set](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.xlsx) was compiled with Refinitiv EIKON (Datastream) that gathers daily stock prices in USD (adjusted for dividends) from 31.12.2013-31.12.2023 for the ten biggest tech firms in terms of market capitalization.  
   Data Frame Structure and technical specificity can be found [here](https://github.com/Nicodu21/DTFF-project/blob/main/Data/Stock_Prices.txt)
 
 # Structure of Project
