@@ -19,7 +19,7 @@ announcements_data <- read_delim("Data/announcements.csv", delim = ";", col_type
 
 # Define UI
 ui <- fluidPage(
-  titlePanel("Cours des Actions (2019-2020)"),
+  titlePanel("Stock prices between (2014-2024)"),
   sidebarLayout(
     sidebarPanel(
       selectInput("company", "Select Company:", choices = unique(stock_data$Name)),
@@ -62,9 +62,9 @@ server <- function(input, output) {
                 aes(x = Date, y = Close, text = Announcement),
                 color = "red", size = 3) +
       labs(
-        title = paste("Cours de l'action", input$company, "(2019-2020)"),
+        title = paste("Stock price", input$company, "(2014-2024)"),
         x = "Date",
-        y = "Prix de clôture (USD)"
+        y = "Closing price (USD)"
       ) +
       theme_minimal() +
       scale_y_continuous(labels = scales::dollar) +
