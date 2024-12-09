@@ -50,7 +50,7 @@ To run the code ensure that your environment has the needed libraries by using p
 
 you can find requirements.txt [here](https://github.com/Nicodu21/DTFF-project/blob/requirements.txt)
 
-To modify the presentation or report you require a tex editor, we used [MikTex](https://miktex.org/)
+To modify the presentation or report you require a tex editor, we used [Overleaf](https://nl.overleaf.com/)
 
 ## Dependencies
 
