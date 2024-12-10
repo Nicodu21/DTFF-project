@@ -37,3 +37,7 @@ COPY requirements.txt /digital_tools/
 COPY code/notebook/DTFF_project.ipynb /digital_tools/main.ipynb
 COPY Data/announcements.csv /digital_tools/
 COPY Data/Stock_Prices_csv.csv /digital_tools/
+
+#command to launch the R app
+# docker build -t jupyter_notebook_container .
+# docker run -p 8888:8888 jupyter_notebook_container
