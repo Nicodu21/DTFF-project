@@ -36,6 +36,7 @@ The affect of product annoucments on the stock volatility of tech companies.
     │   └── output          # Charts outputted from code
     ├── .gitignore          # Git configuration to ignore specific files or directories
     ├── Dockerfile          # Instructions to build a Docker image for the project
+    ├── app.R               # Interactive R Shiny app
     ├── README.md           # Project overview and instructions
     └── requirements.txt    # Python dependencies for the project
 
@@ -54,7 +55,7 @@ To modify the presentation or report you require a tex editor, we used [Overleaf
 
 ## Dependencies
 
-See [requirements](https://github.com/Nicodu21/DTFF-project/blob/requirements.txt)
+See [requirements](https://github.com/Nicodu21/DTFF-project/blob/main/requirements.txt))
 
 ## Bugs
 
