@@ -52,7 +52,8 @@ To run the code ensure that your environment has the needed libraries by using p
 
 You can find requirements.txt [here](https://github.com/Nicodu21/DTFF-project/blob/main/requirements.txt)
 
-To run the Shiny app, navigate to the appropriate directory and launch the app using R:
+To run the Shiny app, navigate to the appropriate directory and launch the app using R:  
+[Dockerfile](https://github.com/Nicodu21/DTFF-project/blob/main/Dockerfile)
 
 To modify the presentation or report you require a tex editor, we used [Overleaf](https://nl.overleaf.com/)
 
