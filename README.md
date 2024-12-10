@@ -50,9 +50,9 @@ To run the code ensure that your environment has the needed libraries by using p
 
 `pip install -r requirements.txt`
 
-you can find requirements.txt [here](https://github.com/Nicodu21/DTFF-project/blob/main/requirements.txt)
+You can find requirements.txt [here](https://github.com/Nicodu21/DTFF-project/blob/main/requirements.txt)
 
-using the shiny app
+To run the Shiny app, navigate to the appropriate directory and launch the app using R:
 
 To modify the presentation or report you require a tex editor, we used [Overleaf](https://nl.overleaf.com/)
 
