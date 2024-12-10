@@ -55,7 +55,7 @@ To modify the presentation or report you require a tex editor, we used [Overleaf
 
 ## Dependencies
 
-See [requirements](https://github.com/Nicodu21/DTFF-project/blob/requirements.txt)
+See [requirements](https://github.com/Nicodu21/DTFF-project/blob/main/requirements.txt))
 
 ## Bugs
 
