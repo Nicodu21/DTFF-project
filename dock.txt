@@ -33,6 +33,7 @@ RUN pip install numpy
 RUN pip install matplotlib
 RUN pip install seaborn
 RUN pip install scikit-learn
+RUN pip install openpyxl
 COPY requirements.txt /digital_tools/
 COPY code/notebook/DTFF_project.ipynb /digital_tools/main.ipynb
 COPY Data/announcements.csv /digital_tools/
