@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: dock.txt
+    container_name: jupyter_notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./code:/digital_tools/code
+      - ./Data:/digital_tools/Data
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+
+  shiny:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: shiny_app
+    ports:
+      - "3838:3838"
+    volumes:
+      - ./app.R:/srv/shiny-server/app.R  # Map app.R to the expected location
+      - ./Data:/srv/shiny-server/Data    # Map Data directory for supporting files
+
+
+#  to run both docker at the same time: docker-compose up --build
+# R Shiny app: Copy and paste into your browser http://localhost:3838
+# Jupyter notebook: When the container starts, it outputs a URL containing the token in the logs. 
+#                   Copy the token and paste it into the browser to access the Jupyter Notebook.
+
