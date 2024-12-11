@@ -37,6 +37,7 @@ The affect of product annoucments on the stock volatility of tech companies.
     ├── .gitignore          # Git configuration to ignore specific files or directories
     ├── Dockerfile          # Instructions to build a Docker image for the Shiny app
     ├── dock.txt            # Instructions to build a Docker image for the Jupyter notebook
+    ├── docker-compose.yml  # Instructions to run both docker containers simultaneously
     ├── app.R               # Interactive R Shiny app
     ├── README.md           # Project overview and instructions
     └── requirements.txt    # Python dependencies for the project
@@ -50,10 +51,16 @@ To run the code ensure that your environment has the needed libraries by using p
 
 `pip install -r requirements.txt`
 
-You can find requirements.txt [here](https://github.com/Nicodu21/DTFF-project/blob/main/requirements.txt)
+You can find requirements.txt [here](https://github.com/Nicodu21/DTFF-project/blob/main/requirements.txt)  
 
+#Docker
 To run the Shiny app, navigate to the appropriate directory and launch the app using R:  
 [Dockerfile](https://github.com/Nicodu21/DTFF-project/blob/main/Dockerfile)
+
+To run the Jupyter notebook: [dock.txt](https://github.com/Nicodu21/DTFF-project/blob/main/dock.txt)  
+
+To run both docker container simultaneously and have the jupyter notebook and Shiny app run at the same time:  
+[docker-compose.yml](https://github.com/Nicodu21/DTFF-project/blob/main/docker-compose.yml)
 
 To modify the presentation or report you require a tex editor, we used [Overleaf](https://nl.overleaf.com/)
 
