@@ -29,6 +29,7 @@ The affect of product annoucments on the stock volatility of tech companies.
 
     ├── Data                # Data used for our analysis
     ├── Text                # Documentation files
+    │   ├── images          # Images of Presentation and Report
     │   ├── presentation    # Presentation of project
     │   └── report          # Report of project
     ├── code
