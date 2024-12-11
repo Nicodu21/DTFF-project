@@ -53,7 +53,7 @@ To run the code ensure that your environment has the needed libraries by using p
 
 You can find requirements.txt [here](https://github.com/Nicodu21/DTFF-project/blob/main/requirements.txt)  
 
-#Docker
+# Docker
 To run the Shiny app, navigate to the appropriate directory and launch the app using R:  
 [Dockerfile](https://github.com/Nicodu21/DTFF-project/blob/main/Dockerfile)
 
@@ -62,6 +62,7 @@ To run the Jupyter notebook: [dock.txt](https://github.com/Nicodu21/DTFF-project
 To run both docker container simultaneously and have the jupyter notebook and Shiny app run at the same time:  
 [docker-compose.yml](https://github.com/Nicodu21/DTFF-project/blob/main/docker-compose.yml)
 
+# Latex
 To modify the presentation or report you require a tex editor, we used [Overleaf](https://nl.overleaf.com/)
 
 ## Dependencies
